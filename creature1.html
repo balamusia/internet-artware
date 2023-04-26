@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Matter.js Example</title>
+  <style>
+
+  body{
+    background:red;
+  }
+
+  #container { position: relative; }
+   .canvas { position: absolute; top: 0; left: 0; }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      position:absolute;
+    }
+  </style>
+</head>
+<body>
+  <script src="matter.min.js"></script>
+  <script src="https://unpkg.com/hydra-synth"></script>
+  <script src="hydracreature.js"></script>
+  <script src="matterp5.js"></script>
+
+
+  <div id="container">
+      <canvas class="canvas" id="canvas1 myCanvas"></canvas>
+      <canvas class="canvas" id="canvas2"></canvas>
+  </div>
+
+</body>
+</html>
