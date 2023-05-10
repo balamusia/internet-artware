@@ -1,4 +1,5 @@
 
+let headRotation = 1;
 
 const canvas2 = document.querySelector('#myCanvas')
 
@@ -7,7 +8,13 @@ const canvas2 = document.querySelector('#myCanvas')
    detectAudio: false
  })
  // run some hydra code!
- osc(10, 0.1, 0.8).rotate(0, 0.3).kaleid().color(-1, 1).out()
+ setInterval(() => {
+ osc(10, 0.1, 0.8).rotate(0, 0.3).kaleid().color(-1, 1)
+ .modulate(
+		noise(headRotation*10,10,0.5)
+		)
+    .out()
+},1000);
 
 
 
@@ -212,3 +219,8 @@ Composite.add(engine.world, mouseConstraint);
 
 // Start the engine
 Engine.run(engine);
+
+setInterval(() => {
+      headRotation = c1Head.angle;
+      console.log(c1Head.angle);
+    }, 200);

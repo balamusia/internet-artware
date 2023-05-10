@@ -13,8 +13,8 @@
    .canvas { position: absolute; top: 0; left: 0; }
 
     canvas {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 80%;
       position:absolute;
     }
   </style>
@@ -30,6 +30,25 @@
       <canvas class="canvas" id="canvas1 myCanvas"></canvas>
       <canvas class="canvas" id="canvas2"></canvas>
   </div>
+
+<script>
+
+// Get all the canvas elements on the page
+const canvases = document.getElementsByTagName('canvas');
+
+// Loop through each canvas element and set the dimensions
+for (let i = 0; i < canvases.length; i++) {
+  canvases[i].style.width = '50%';
+  canvases[i].style.height = '100%';
+  canvases[i].style.position = 'absolute';
+  canvases[i].style.top = '50%';
+  canvases[i].style.left = '50%';
+  canvases[i].style.transform = 'translate(-50%, -50%)';
+}
+
+
+
+</script>
 
 </body>
 </html>

@@ -111,7 +111,7 @@ render: {
   });
 
 
-let ground = Bodies.rectangle(400, 400, 810, 60, { isStatic: true });
+let ground = Bodies.rectangle(600, 400, 810, 60, { isStatic: true });
 
 
 
